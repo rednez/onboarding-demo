@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  standalone: true,
+  imports: [RouterModule],
+  template: `<h2>OnBoarding Demo App</h2>
+  <router-outlet></router-outlet>`,
 })
 export class AppComponent {
-  title = 'OnboardingDemo';
 }
