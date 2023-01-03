@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {Router, RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  standalone: true,
+  imports: [RouterModule],
+  template: `<h2>OnBoarding Demo App</h2>
+  <button (click)="gotoCamera()">Camera</button>
+  <router-outlet></router-outlet>
+  `,
 })
 export class AppComponent {
-  title = 'OnboardingDemo';
+  constructor(private router: Router) {
+  }
+
+  gotoCamera() {
+    this.router.navigate(['camera']);
+  }
 }
