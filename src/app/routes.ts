@@ -6,4 +6,9 @@ export const ROUTES: Route[] = [
     loadComponent: () =>
       import('./camera.component').then((mod) => mod.CameraComponent),
   },
+  {
+    path: 'sign-pad',
+    loadComponent: () =>
+      import('./sign-pad.component').then((mod) => mod.SignPadComponent),
+  },
 ];

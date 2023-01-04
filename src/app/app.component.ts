@@ -7,6 +7,7 @@ import {Router, RouterModule} from '@angular/router';
   imports: [RouterModule],
   template: `<h2>OnBoarding Demo App</h2>
   <button (click)="gotoCamera()">Camera</button>
+  <button (click)="gotoSignPad()">Sign Pad</button>
   <router-outlet></router-outlet>
   `,
 })
@@ -16,5 +17,9 @@ export class AppComponent {
 
   gotoCamera() {
     this.router.navigate(['camera']);
+  }
+
+  gotoSignPad() {
+    this.router.navigate(['sign-pad']);
   }
 }
